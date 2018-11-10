@@ -12,6 +12,6 @@ Update every 3 seconds by default. Can be changed with the following command :
 `/setoption DCT_UpdateInterval <newInterval>` (in milliseconds).
 
 ## Download
-Lastest version : https://github.com/Judgy53/SWL-DailyChallengesTracker/releases/lastest
+Latest version : https://github.com/Judgy53/SWL-DailyChallengesTracker/releases/latest
 
 Extract it to : `<your SWL Directory>\Data\Gui\Custom\Flash\`

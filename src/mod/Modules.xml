@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Root>
+  <Module  name = "DailyChallengesTracker"
+    movie       = "DailyChallengesTracker\DailyChallengesTracker.swf"
+    flags       = "GMF_CFG_STORE_USER_CONFIG | GMF_DONT_UNLOAD"
+    depth_layer = "Back"
+    sub_depth   = "1"
+    variable    = "DCT_Enabled"
+    criteria    = "DCT_Enabled &amp;&amp; (guimode &amp; (GUIMODEFLAGS_INPLAY | GUIMODEFLAGS_ENABLEALLGUI))"
+    config_name = "DCT_Cfg"
+  />
+</Root>

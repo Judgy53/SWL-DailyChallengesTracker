@@ -4,7 +4,7 @@
     movie       = "DailyChallengesTracker\DailyChallengesTracker.swf"
     flags       = "GMF_CFG_STORE_USER_CONFIG | GMF_DONT_UNLOAD"
     depth_layer = "Top"
-    sub_depth   = "1"
+    sub_depth   = "2"
     variable    = "DCT_Enabled"
     criteria    = "DCT_Enabled &amp;&amp; (guimode &amp; (GUIMODEFLAGS_INPLAY | GUIMODEFLAGS_ENABLEALLGUI))"
     config_name = "DCT_Cfg"

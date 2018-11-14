@@ -1,6 +1,8 @@
 # SWL-DailyChallengesTracker
 SWL Addon that allows you to get the DailyChallenges Window as an overlay.
 
+![Screenshot](https://github.com/Judgy53/SWL-DailyChallengesTracker/raw/master/screenshot.jpg)
+
 ## Usage
 Clicking the daily challenge icon on your topbar will toggle the overlay display.
 

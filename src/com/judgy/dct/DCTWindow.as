@@ -1,3 +1,4 @@
+import com.Utils.Signal;
 import com.judgy.dct.DCTChallenge;
 import flash.geom.Point;
 import mx.utils.Delegate;
@@ -18,6 +19,8 @@ class com.judgy.dct.DCTWindow
 	
 	private var m_updateInterval:Number;
 	private var m_updateIntervalMS:Number;
+	
+	public var SignalPosChanged:Signal = new Signal();
 	
 	public function DCTWindow(swfroot:MovieClip, pos:Point) {
 		m_swfRoot = swfroot;
@@ -69,6 +72,7 @@ class com.judgy.dct.DCTWindow
 			m_window.onReleaseOutside = undefined;
 			
 			m_pos = new Point(m_window._x, m_window._y);
+			SignalPosChanged.Emit(m_pos);
 		}
 	}
 	

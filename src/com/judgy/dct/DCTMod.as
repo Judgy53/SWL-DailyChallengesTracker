@@ -48,6 +48,12 @@ class com.judgy.dct.DCTMod {
 		
 		m_icon.Unload();
 		m_icon = undefined;
+		
+		if (m_window) {
+			m_window.SignalPosChanged.Disconnect(SlotWindowPosChanged, this);
+			m_window.Unload();
+			m_window = undefined;
+		}
 	}
 	
 	public function LoadConfig(config:Archive) {
@@ -78,8 +84,9 @@ class com.judgy.dct.DCTMod {
 			m_window = new DCTWindow(m_swfRoot, m_windowPos);
 			m_window.SetUpdateInterval(m_updateInterval);
 			m_window.Draw();
+			m_window.SignalPosChanged.Connect(SlotWindowPosChanged, this);
 		} else {
-			m_windowPos = m_window.GetPos();
+			m_window.SignalPosChanged.Disconnect(SlotWindowPosChanged, this);
 			m_window.Unload();
 			m_window = undefined;
 		}
@@ -93,5 +100,9 @@ class com.judgy.dct.DCTMod {
 			if (m_window)
 				m_window.SetUpdateInterval(m_updateInterval);
 		}
+	}
+	
+	private function SlotWindowPosChanged(newPos:Point) {
+		m_windowPos = newPos;
 	}
 }
